@@ -27,7 +27,13 @@ import { GoogleGenAI } from "@google/genai";
 
 import { QASWA_PRODUCTS, DEFAULT_PRODUCTS, AGILE_PRODUCTS } from '../constants/products';
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+const getAI = () => {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) {
+    throw new Error('GEMINI_API_KEY is required for AI features');
+  }
+  return new GoogleGenAI({ apiKey });
+};
 
 export function LeadDetail({ 
   lead, 
@@ -198,6 +204,7 @@ export function LeadDetail({
     
     setIsDrafting(true);
     try {
+      const ai = getAI();
       const response = await ai.models.generateContent({
         model: "gemini-3-flash-preview",
         contents: `You are a specialized AI assistant for DMG Pharmaceuticals Sales Team.
