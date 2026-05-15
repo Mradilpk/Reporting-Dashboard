@@ -20,7 +20,7 @@ import {
   Loader2
 } from 'lucide-react';
 import { Lead, TimelineEntry, OrderStatus } from '../types';
-import { cn } from './Navigation';
+import { cn } from '../lib/utils';
 import { motion } from 'motion/react';
 import { useState, KeyboardEvent, useMemo } from 'react';
 import { GoogleGenAI } from "@google/genai";

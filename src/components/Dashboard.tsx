@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { Search, Filter, ChevronLeft, ChevronRight, ArrowUpDown, ArrowUp, ArrowDown } from 'lucide-react';
 import { Lead } from '../types';
-import { cn } from './Navigation';
+import { cn } from '../lib/utils';
 
 type SortKey = keyof Lead;
 

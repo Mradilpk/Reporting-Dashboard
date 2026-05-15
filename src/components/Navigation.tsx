@@ -20,16 +20,8 @@ import {
   ChevronLeft,
   ChevronRight
 } from 'lucide-react';
-import { clsx, type ClassValue } from 'clsx';
-import { twMerge } from 'tailwind-merge';
 import { motion, AnimatePresence } from 'motion/react';
-
-/**
- * Utility for tailwind classes
- */
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
+import { cn } from '../lib/utils';
 
 interface SidebarProps {
   active?: string;

@@ -7,14 +7,9 @@ import {
   RefreshCw,
   User,
   LayoutGrid,
-  Search,
-  Calendar,
   Building2,
-  Package,
-  TrendingDown,
   UserCheck,
   Activity,
-  Check,
   CheckSquare,
   Square,
   ArrowUpDown
@@ -33,6 +28,7 @@ import {
   Area
 } from 'recharts';
 import { Lead } from '../types';
+import { cn } from '../lib/utils';
 import { 
   startOfMonth, 
   endOfMonth, 
@@ -41,8 +37,7 @@ import {
   endOfQuarter, 
   subQuarters, 
   isWithinInterval, 
-  parseISO,
-  startOfToday
+  parseISO
 } from 'date-fns';
 
 interface TeamDashboardProps {
@@ -759,8 +754,4 @@ export function TeamDashboard({ leads: allLeads, onBack }: TeamDashboardProps) {
       </div>
     </div>
   );
-}
-
-function cn(...classes: (string | boolean | undefined)[]) {
-  return classes.filter(Boolean).join(' ');
 }

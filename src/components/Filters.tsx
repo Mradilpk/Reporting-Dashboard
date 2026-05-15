@@ -1,6 +1,6 @@
 import { Filter } from 'lucide-react';
 import { Lead } from '../types';
-import { cn } from './Navigation';
+import { cn } from '../lib/utils';
 import { QASWA_PRODUCTS, DEFAULT_PRODUCTS, AGILE_PRODUCTS } from '../constants/products';
 import { AGILE_LOCATIONS, QASWA_LOCATIONS } from '../constants/locations';
 

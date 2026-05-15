@@ -9,7 +9,6 @@ import {
   UserCheck,
   ArrowLeft,
   LayoutGrid,
-  Check,
   CheckSquare,
   Square
 } from 'lucide-react';
@@ -32,10 +31,10 @@ import {
   endOfQuarter, 
   subQuarters, 
   isWithinInterval, 
-  parseISO,
-  startOfToday
+  parseISO
 } from 'date-fns';
 import { Lead } from '../types';
+import { cn } from '../lib/utils';
 
 interface ManagerDashboardProps {
   leads: Lead[];
@@ -610,8 +609,4 @@ export function ManagerDashboard({ leads: allLeads, group: initialGroup, onBack 
       </div>
     </div>
   );
-}
-
-function cn(...classes: (string | boolean | undefined)[]) {
-  return classes.filter(Boolean).join(' ');
 }
