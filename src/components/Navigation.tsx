@@ -11,11 +11,9 @@ import {
   TrendingUp, 
   Settings, 
   Wrench,
-  Plus,
   Home,
   ChevronDown,
   Bell,
-  Grid,
   LayoutGrid,
   ChevronLeft,
   ChevronRight
@@ -169,14 +167,6 @@ export function Header({ title, currentView, onDashboardClick, onManagerDashboar
         <h1 className="text-sm font-black text-slate-800 uppercase tracking-tight">ADMIN DASHBOARD</h1>
         <div className="h-6 w-[1px] bg-slate-200" />
         <div className="flex gap-1.5">
-          <a 
-            href="https://crm-profile-update.vercel.app/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="bg-slate-800 hover:bg-slate-900 text-white rounded px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider h-7 flex items-center gap-1.5 transition-all active:scale-95 whitespace-nowrap"
-          >
-            <Plus className="w-3 h-3" /> New Customer
-          </a>
           <button 
             onClick={onLeadsClick}
             className={cn(
